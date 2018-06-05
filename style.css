@@ -1,0 +1,570 @@
+/*..... Global .....*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: #272729;
+    font-size: 14px;
+}
+
+.wrapper {
+    width: 85%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3.3rem;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+h3 {
+    font-family: 'Mawns Handwriting';
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 80px;
+    margin-left: 50px;
+    color: #1c1c1c;
+}
+
+p {
+    margin-top: 25px;
+    line-height: 1.5;
+}
+
+span {
+    color: #888;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btnFill {
+    color: #1c1c1c;
+    background: #fee252;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 100px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btnEmpty {
+    color: #fee252;
+    border: 1px solid #fee252;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 100px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btnFill:hover {
+    transition: 0.5s;
+    background: #fff;
+}
+
+.btnEmpty:hover {
+    transition: 0.5s;
+    background: #fee252;
+    color: #1c1c1c;
+}
+
+/*..... Header .....*/
+header {
+    height: 100vh;
+    box-sizing: border-box;
+    /* background-image: url('img/1.jpg');
+    background-position: center;
+    background-size: cover; */
+
+}
+
+.landing {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 80px;
+    width: 350px;
+    background: #fee252;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* Sidebar */
+.landing .sidebar {
+    width: 250px;
+    height: calc(100vh - 80px);
+    background: rgba(13, 13, 13, 0.7);
+    position: absolute;
+    left: 0;
+    top: 80px;
+    z-index: 1;
+}
+
+.sidebar .links {
+    margin-top: 60px;
+}
+
+.sidebar a {
+    display: block;
+    color: #888888;
+    font-weight: 500;
+    padding: 20px 0 20px 60px;
+}
+
+.sidebar a:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.6s;
+}
+
+.sidebar a.active {
+    color: #fff;
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.sidebar a.active::after {
+    content: "";
+    height: 2px;
+    width: 50px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 29px;
+    z-index: 1;
+}
+
+/* Main Section */
+.content {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.content1 {
+    background: linear-gradient(to top, rgba(0,0,0,.9) 10%, rgba(0,0,0,0) 60%), url('img/1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.content2 {
+    background: linear-gradient(to top, rgba(0,0,0,.9) 10%, rgba(0,0,0,0) 60%), url('img/2.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.content3 {
+    background: linear-gradient(to top, rgba(0,0,0,.9) 10%, rgba(0,0,0,0) 60%), url('img/3.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.content4 {
+    background: linear-gradient(to top, rgba(0,0,0,.9) 10%, rgba(0,0,0,0) 60%), url('img/4.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.content .main {
+    width: 400px;
+    position: absolute;
+    /* margin: auto; */
+    left: 350px; top: 200px;
+}
+
+/* Animations */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/*..... Sliding Arrow .....*/
+.slide-arrow {
+    height: 50px;
+    width: 65%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 90%;
+    left: 350px;
+    position: relative;
+    z-index: 2;
+}
+
+#left, #right {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#left img, #right img {
+    position: absolute;
+    top: 15px; left: 15px;
+}
+
+.slide-arrow p {
+    padding: 10px 20px;
+    margin-left: 130px;
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+}
+
+#image-no {
+    right: 5%;
+}
+
+.line {
+    height: 2px;
+    width: 85%;
+    background: #888;
+    position: absolute;
+    top: 24px;
+    left: 15%;
+}
+
+/*..... Featured Spots .....*/
+.featuredSpots {
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 80px;
+}
+
+.featuredSpots .heading {
+    width: 15%;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 0 20px 0 0;
+}
+
+.featuredSpots .spots {
+    width: 85%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0 0 7%;
+}
+
+.spot1, .spot2, .spot3 {
+    width: 30%;
+}
+
+.spots .img {
+	position: relative;
+	width: 100%;		/* desired width */
+}
+.spots .img:before {
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.spot1 .img {
+    background: url(img/2.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.spot2 .img {
+    background: url(img/3.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.spot3 .img {
+    background: url(img/4.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.spotContent {
+    padding: 20px 5px;
+}
+
+/* Image Article */
+.article {
+    margin: 80px 0;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.art-img {
+    width: 50%;
+}
+
+.art-img .bg {
+	position: relative;
+	width: 100%;		/* desired width */
+    background: url(img/5.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.art-main{
+    width: 45%;
+}
+
+.art-main .art-content {
+    padding-right: 100px;
+}
+
+.art-main span {
+    font-family: serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.art-main p {
+    width: 70%;
+}
+
+/*..... Gallery .....*/
+.gallery {
+    display: flex;
+    box-sizing: border-box;
+    padding: 80px 0;
+}
+
+.gallery .heading {
+    width: 15%;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 0 20px 0 0;
+}
+
+.gallery .pics {
+    width: 85%;
+    box-sizing: border-box;
+    padding: 5% 0 0 7%;
+}
+
+.pics .row1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pics .row1 #slide-pic {
+    width: 64%;
+    background: url(img/2.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#slide-pic .pic-description {
+    background: rgba(54, 54, 54, 0.6);
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#slide-pic .pic-description span {
+    color: #888;
+    font-size: 16px;
+}
+
+.pics .row1 #col {
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pics #col #pic2 {
+    background: url(img/3.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.pics #col #pic3 {
+    background: url(img/1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.pics .row2 {
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pics .row2 #pic4 {
+    width: 29%;
+    background: url(img/1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.pics .row2 #pic5 {
+    width: 64%;
+    background: url(img/5.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.pics .square {
+	position: relative;
+	width: 100%;		/* desired width */
+}
+.pics .square:before {
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+/* collections */
+.collections {
+    padding: 50px;
+  /*  background:
+    linear-gradient( to bottom, rgba(39, 39, 41, 1) 10%,
+    rgba(39, 39, 41, .2) 60%, rgba(39, 39, 41, 1) 10%), url(img/collect2.jpeg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;*/
+}
+
+.collections>p {
+    margin-bottom: 100px;
+}
+
+.collections .col {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    border-bottom: 1px solid #888;
+}
+
+.col .col-description {
+    width: 60%;
+}
+
+.col .col-img {
+    width: 25%;
+}
+
+.col-1 .col-img {
+    background: url(img/5.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.col-2 .col-img {
+    background: url(img/4.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.col-3 .col-img {
+    background: url(img/1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Subscribe */
+.subscribe {
+    text-align: center;
+    margin: 100px 0;
+}
+
+h4 {
+    font-size: 1.7rem;
+    margin-bottom: 50px;
+}
+
+.subscribe input {
+    color: #000;
+    background: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: 0;
+    border-radius: 100px;
+    width: 300px;
+    margin: 0 10px;
+}
+
+.subscribe button {
+    border: 0;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    height: 80px;
+    background: #fee252;
+    color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.footer-logo, .copy, .social {
+    flex: 1 0 30%;
+}
+
+.footer-logo {
+    text-align: left;
+}
+
+.copy {
+    text-align: center;
+}
+
+.copy p {
+    display: inline;
+}
+
+.social {
+    text-align: right;
+    margin-right: 50px;
+}
+
+.social a {
+    margin-left: 20px;
+}
+
+/* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae praesentium natus obcaecati aliquid saepe facilis, explicabo quas nesciunt eius eveniet. Consequuntur harum soluta, libero, est blanditiis, maxime accusamus mollitia consectetur vitae pariatur enim tempore labore, qui culpa eum tenetur. Aut iusto consectetur labore, debitis eum, porro nobis dolorem ea saepe iste praesentium sunt veniam magni rerum quasi repellat, in officia animi cumque laudantium. Sapiente quo est pariatur eius corporis tenetur officia doloremque qui dignissimos consequuntur quam, tempore in deleniti eaque dolor natus obcaecati, ab quas voluptatem non! Id suscipit doloremque numquam beatae, temporibus ducimus fuga, aliquid labore, facilis quibusdam minima. Adipisci nesciunt et ducimus, expedita! Repudiandae officia, amet quaerat natus dolorum quasi doloribus optio cumque animi repellendus ipsam laboriosam iste aliquid. Ipsam vero cupiditate asperiores, nisi quisquam numquam, aliquam minus quae perferendis assumenda repudiandae distinctio voluptatum perspiciatis, quo voluptate praesentium repellendus nulla accusamus pariatur, culpa mollitia maxime id debitis! Neque illum quo hic odit et tempore nihil cumque similique molestiae aspernatur iure ducimus doloremque blanditiis excepturi distinctio, rerum magni, soluta autem reiciendis eligendi, impedit reprehenderit fuga? Impedit dolores a, et architecto autem accusantium id repudiandae, ea similique ut ratione omnis, accusamus facere aperiam sint ducimus aut aliquid debitis quas reiciendis. */
